@@ -30,7 +30,7 @@ function handleTick(): void {
 		vscode.window.showInformationMessage(
 			'Hey there fellow developer, take some time to stretch a bit if you can. Health is important too you know ;)',
 			{ modal: true },
-			{ title: `Add ${configuration.get('stretchReminder.intervalBetweenStretch')} minutes` },
+			{ title: `Add ${configuration.get('stretchReminder.snooze')} minutes` },
 			{ title: 'Restart timer', isCloseAffordance: true }
 		)
 		.then(selectedOption => {
