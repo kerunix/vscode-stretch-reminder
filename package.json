@@ -1,0 +1,70 @@
+{
+  "name": "vscode-stretch-reminder",
+	"displayName": "Stretch Reminder",
+	"description": "A simple extension to remind you developers to stretch once in a while during coding sessions. Gotta keep that sweet posture going good.",
+	  "repository": {
+    "type": "git",
+    "url": "https://github.com/kerunix/vscode-stretch-reminder.git"
+	},
+	"license": "SEE LICENSE IN LICENSE.txt",
+  "homepage": "https://github.com/kerunix/vscode-stretch-reminder/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/kerunix/vscode-stretch-reminder/issues"
+  },
+	"icon": "images/stretch.png",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+    "onStartupFinished"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "Stretch Reminder",
+			"properties": {
+				"stretchReminder.intervalBetweenStretch": {
+					"type": "number",
+					"default": 30,
+					"description": "Set the interval between stretching sessions (in minutes). Default is 30 minutes."
+				},
+				"stretchReminder.snooze": {
+					"type": "number",
+					"default": 5,
+					"description": "Set the value of the snooze (in minutes). Default is 5 minutes."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run package",
+		"compile": "webpack --devtool nosources-source-map --config ./build/node-extension.webpack.config.js",
+		"watch": "webpack --watch --devtool nosources-source-map --info-verbosity verbose --config ./build/node-extension.webpack.config.js",
+		"package": "webpack --mode production --config ./build/node-extension.webpack.config.js",
+		"test-compile": "tsc -p ./",
+		"test-watch": "tsc -watch -p ./",
+		"pretest": "yarn run test-compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.51.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.9.0",
+		"@typescript-eslint/eslint-plugin": "^4.1.1",
+		"@typescript-eslint/parser": "^4.1.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0",
+		"ts-loader": "^8.0.3",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12"
+	}
+}
