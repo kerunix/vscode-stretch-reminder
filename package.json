@@ -1,5 +1,6 @@
 {
-  "name": "vscode-stretch-reminder",
+	"name": "vscode-stretch-reminder",
+	"publisher": "kerunix",
 	"displayName": "Stretch Reminder",
 	"description": "A simple extension to remind you developers to stretch once in a while during coding sessions. Gotta keep that sweet posture going good.",
 	  "repository": {
@@ -11,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/kerunix/vscode-stretch-reminder/issues"
   },
-	"icon": "images/stretch.png",
+	"icon": "images/stretching.png",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.51.0"

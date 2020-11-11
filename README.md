@@ -18,3 +18,6 @@ This extension has the following settings:
 * Add a way to configure some less intrusive alerts (notifications instead of modal)
 * Add commands to pause/restart the timer from the command palette
 * Any cool ideas you want to suggest
+
+Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/)
+
